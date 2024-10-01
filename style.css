@@ -1,0 +1,378 @@
+@import url('./css_vars.css');
+  
+*{
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
+    user-select: none;
+}
+body {
+    background-color: var(--dark-green);
+    height: 100vh;
+    
+}
+.container { 
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    /* background-color: rgba(255, 0, 0, 0.192); */
+    position: relative;
+}
+
+.text h1,h2,h3,h4,p {
+    color: var(--white);
+    font-family: "Poppins", system-ui;
+    overflow: hidden;
+}
+.text p {
+    font-weight: var(--light);
+}
+
+.bottom-banner {
+    background-color: var(--light-green);
+    height: 8vh;
+    position: absolute;
+    bottom: 3%;
+    width: 100%;
+    padding-inline: 5.2vw;
+    display: flex;
+    align-items: center;
+    
+}
+.bottom-banner p {
+    margin-right: 30px;
+    position: relative;
+    left: 1px;
+    cursor: pointer;
+    font-size: var(--font-size-S);
+    z-index: 9999;
+}
+.left-section {
+    position: relative;
+    height: 100%;
+    width: 40vw;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    left: 5vw;
+    /* top: 6rem; */
+    
+}
+
+.left-section > * {
+    position: absolute;
+    margin-top: 20vh;
+    font-size: var(--font-size-M);
+}
+
+ .left-section > h3:first-child{
+    position: absolute;
+    top: 1rem; 
+    
+    color: var(--light-green);
+    font-weight: var(--light);
+    
+}
+.left-section > h3:nth-child(2){
+    position: absolute;
+    
+    top: 3.3rem;
+    left: 2rem;
+    color: var(--mid-green);
+    font-weight: var(--medium);
+}
+.left-section .name {
+    position: absolute;
+    top: 10rem;
+    width: 100%;
+}
+.left-section .name h2 {
+    font-size: var(--font-size-L);
+    
+}
+.left-section .name h2:nth-child(2){
+    position: relative;
+    left: 2.3rem;
+    line-height: 93%;
+}
+
+
+.right-section { 
+    position: absolute;
+    top: 3px;
+    right: 0px;
+    height: 100%;
+    width: 100vw;
+    z-index: 2;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    overflow-y :visible;
+   
+}
+.right-section>div:first-child {
+    position: absolute;
+    right: 0;
+    top: 13rem;
+    width: 7rem;
+    height: 8.3rem;
+    background-color: var(--light-green);
+}
+.right-section h3 {
+    position: absolute;
+    top: 15rem;
+    right: 4.7rem;
+    font-size: var(--font-size-L);
+}
+
+.right-section .project-list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    position: absolute;
+    /* top: 25rem; */
+    right: 0;
+    /* height: 100%; */
+    width: 55vw;
+    
+}
+
+.right-section .project-box {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0;
+
+}
+
+.right-section > img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit : cover;
+    transform: translate(-50%, -50%);
+  }
+
+
+
+  .project-box:hover{
+    transform: scale(1.02);
+    transform: translateX(-2) translateY(-2);
+    cursor: pointer;
+  }
+
+  .project-box .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(14, 5, 5, 0.7);
+    opacity: 0.7;
+    z-index: 2;
+    transition: background-color 0.5s;
+  }
+
+  .project-box:hover .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(14, 5, 5, 0);
+  }
+
+
+  .project-box .btm-nav .btm-nav-el > img {
+    width: 25px;
+    height: 25px;
+   
+  }
+
+  .project-box .btm-nav { 
+    position: absolute;
+    bottom: -100px;
+
+    width: 100%;
+    height: 4rem;
+    background-color:rgba(14, 5, 5, 0.7);
+
+    transition: all 0.4s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    overflow: hidden;
+    /* cursor: pointer; */
+    z-index: 100;
+  }
+  .project-box:hover .btm-nav { 
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    transform: translateY(-100px);
+  }
+
+  .project-box .btm-nav-el{
+    transition: all 0.4s ease-out;
+    overflow: hidden;
+    /* background-color: green; */
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .project-box .btm-nav-el:hover {
+    transform: scale(1.3) ;
+    cursor: pointer;
+  }
+
+  .btm-nav .btm-nav-el  p{
+    /* animation:  btn-nav-el-txt 0.5s; */
+    /* transform: scale(5); */
+    /* color: red; */
+    font-size: 0.5rem;
+    position: absolute;
+    bottom: -20px;
+    transition: all 0.4s ease;
+    z-index: 999;
+    
+  }
+
+  .btm-nav .btm-nav-el:hover p {
+    transform: translateY(-22px);
+  }
+
+
+.test{
+    background-color: var(--mid-green);
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    opacity: 0.05;
+    cursor: pointer;
+}
+
+.boxes { 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100vw;
+  }
+  
+  
+  .boxes li {
+    background-color:var(--light-green);
+    opacity: 0.05;
+    width: 5vw;
+    height: 5vw;
+  
+  }
+  .project-box { 
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+  }
+
+
+  .about-me-container{
+    position: absolute;
+    right: 0;
+    width: 35vw;
+    padding-right: 4rem;
+
+  }
+  .about-me-container p {
+    line-height: 200%;
+  }
+
+
+  .contact-container {
+    /* background-color: red; */
+    position: absolute;
+    top: -1.5rem;
+    right: 0;
+    /* height: 100%; */
+    width: 35vw;
+    height: 40%;
+    /* padding :1rem; */
+  }
+  .contact-container > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    margin: 1rem;
+    background-color:rgba(14, 5, 5, 0.2);
+    padding: 1rem;
+    transition: all 0.4s ease-out;
+  }
+  .contact-container > div:hover{
+    transform: scale(1.02);
+    transform: translateX(-2) translateY(-2);
+  }
+  .contact-container img {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  @keyframes btn-nav-anim {
+    0%{
+        bottom: -100px;
+    }
+    100%{
+        bottom: 0px;
+    }
+  }
+
+  @keyframes btn-nav-el-txt {
+    0%{
+      bottom : -100px;
+    }
+    100%{
+      bottom: 0px;
+    }
+  }
+
+  .content-displayed{
+    /* position: absolute; */
+    position: absolute;
+    top: 25rem;
+    right: 0;
+    height: 100%;
+    width: 55vw;
+    /* background-color: red; */
+  }
+
+  .projects ,.about-me, .contact  {
+    
+display: flex;
+align-items: center;
+justify-content: space-between;
+    
+  }
+
+
+   .square {
+    width: 40px;
+    height: 40px;
+    background-color: var(--mid-green);
+    margin-right: -0.5rem;
+    position: absolute;
+    
+  }
+
+

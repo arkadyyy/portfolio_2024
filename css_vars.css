@@ -1,0 +1,15 @@
+:root {
+    --dark-green: #272928;
+    --mid-green : #434E4C;
+    --light-green : #787D79;
+    --white : #fefefe;
+
+    --light : 200;
+    --medium : 600;
+    --bold : 800;
+
+    --font-size-L : 3vw;
+    --font-size-M : 2vw;
+    --font-size-S : 0.9vw;
+  }
+  
