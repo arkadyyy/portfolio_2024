@@ -1,7 +1,9 @@
 :root {
     --dark-green: #272928;
     --mid-green : #434E4C;
-    --light-green : #787D79;
+    /* --light-green : #787D79; */
+    --light-green : #6f7470;
+    /* --light-green : #8EB69B; */
     --white : #fefefe;
 
     --light : 200;

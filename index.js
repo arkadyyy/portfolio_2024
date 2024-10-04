@@ -267,13 +267,16 @@ function randomFade() {
   boxes.forEach((box, index) => {
     // const colors = ['red', 'blue', 'yellow'];
     // const colors = ['#434E4C', '#787D79', '#272928'];
+    const colors = ['#434E4C', '#272928','#fefefe','#000000'];
+    // const colors = ['#fefefe','#fbfbfb','#f5f5f5','#fffaf1'];
     // box.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-   
+    
+    const color = colors[Math.floor(Math.random() * colors.length)];
 
     //pick a random number
     if (Math.random() < 0.5) {
       //some boxes fade out
-      gsap.to(box, {opacity:0.05, scale:0, transformOrigin:"50% 50%"})
+      gsap.to(box, {opacity:0.15, scale:0, transformOrigin:"50% 50%"})
       // .then(() => {
       //   gsap.to(box, {
       //     opacity: 1,
@@ -289,7 +292,8 @@ function randomFade() {
       // })
     } else {
       //some boxes fade in
-      gsap.to(box, {ease:"sine.inOut", scale:1, transformOrigin:"50% 50%"})
+      gsap.to(box, {ease:"sine.inOut", scale:1, transformOrigin:"50% 50%",backgroundColor : color})
+      // gsap.to(box, {ease:"sine.inOut", scale:1, transformOrigin:"50% 50%"})
       // .then(() => {
       //   gsap.to(box, {
       //     opacity: 1,
